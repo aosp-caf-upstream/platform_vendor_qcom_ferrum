@@ -60,6 +60,9 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8909/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.vidc.disable.split.mode=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
        dalvik.vm.heapgrowthlimit=128m \
        dalvik.vm.heapminfree=6m \
        ro.config.low_ram=true
