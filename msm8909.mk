@@ -65,7 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
        dalvik.vm.heapgrowthlimit=128m \
        dalvik.vm.heapminfree=6m \
-       ro.config.low_ram=true
+       ro.config.low_ram=false
 
 $(call inherit-product, device/qcom/common/common.mk)
 
