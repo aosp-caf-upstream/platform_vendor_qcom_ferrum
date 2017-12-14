@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += android.hardware.media.omx@1.0-impl
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
+PRODUCT_PACKAGES += \
+    libandroid_net \
+    libandroid_net_32
+
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/msm8909/msm8909.mk
 
