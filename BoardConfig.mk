@@ -25,7 +25,7 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
 
-USE_CLANG_PLATFORM_BUILD := true
+#USE_CLANG_PLATFORM_BUILD := true
 
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
@@ -97,7 +97,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.memcg=false earlyprintk
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.memcg=false earlyprintk androidboot.selinux=permissive
 
 BOARD_EGL_CFG := device/qcom/msm8909/egl.cfg
 
@@ -171,7 +171,7 @@ TARGET_HW_KEYMASTER_V03 := false
 
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
-WITH_DEXPREOPT := false
+WITH_DEXPREOPT := true
 ifneq ($(TARGET_BUILD_VARIANT),user)
   # Retain classes.dex in APK's for non-user builds
   DEX_PREOPT_DEFAULT := nostripping
