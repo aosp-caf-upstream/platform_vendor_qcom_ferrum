@@ -97,8 +97,6 @@ PRODUCT_PACKAGES += \
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/msm8909/msm8909.mk
 
-PRODUCT_BOOT_JARS += qcom.fmradio
-
 PRODUCT_BOOT_JARS += tcmiface
 #PRODUCT_BOOT_JARS += qcmediaplayer
 
