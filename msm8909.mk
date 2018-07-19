@@ -115,6 +115,9 @@ endif
 # Listen configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8909/listen_platform_info.xml:system/etc/listen_platform_info.xml
+# VB xml
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
 
 # Feature definition files for msm8909
 PRODUCT_COPY_FILES += \
