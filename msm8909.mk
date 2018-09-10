@@ -9,6 +9,9 @@ ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
 endif #TARGET_USES_QCOM_BSP
 
+#For targets which donot support vulkan
+TARGET_NOT_SUPPORT_VULKAN :=true
+
 ifeq ($(TARGET_USES_AOSP),true)
 TARGET_USES_QTIC := false
 else
@@ -50,6 +53,7 @@ ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msm8909/media/media_profiles_8909.xml:system/etc/media_profiles.xml \
                       device/qcom/msm8909/media/media_profiles_8909.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
                       device/qcom/msm8909/media/media_codecs_8909.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+                      device/qcom/msm8909/media/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
                       device/qcom/msm8909/media/media_codecs_performance_8909.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
                       device/qcom/msm8909/media/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
 endif
