@@ -73,6 +73,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
        dalvik.vm.heapminfree=6m \
        ro.config.low_ram=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.support_writeback=0
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8909
