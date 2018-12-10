@@ -73,6 +73,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
        dalvik.vm.heapminfree=6m \
        ro.config.low_ram=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.support_writeback=0
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8909
@@ -183,6 +186,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     android.hardware.configstore@1.0-service \
     android.hardware.broadcastradio@1.0-impl
+
+TARGET_EXCLUDES_DISPLAY_PP := true
 
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
