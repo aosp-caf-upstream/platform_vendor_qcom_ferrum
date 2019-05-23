@@ -48,4 +48,7 @@
    The default is false.
    -->
    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+
+   <!-- Enable WPA3 support -->
+   <bool translatable="false" name="config_wifi_wpa3_supported">false</bool>
 </resources>
